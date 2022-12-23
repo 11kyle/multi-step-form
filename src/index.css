@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #EFF5FF;
+  }
+}
+@layer components {
+  .btn {
+    @apply text-white rounded-md px-4 py-3;
+  }
+  .btn-primary {
+    @apply bg-[#022959] hover:bg-[#164A8A];
+  }
+  .btn-secondary {
+    @apply bg-transparent text-[#9699AA] hover:text-[#022959];
+  }
+  .btn-success {
+    @apply bg-[#483EFF] hover:bg-[#928CFF];
+  }
+  .heading-1 {
+    @apply text-2xl font-bold;
+  }
+  .heading-2 {
+    @apply text-base font-medium;
+  }
+  .active {
+    @apply bg-[#483EFF];
+  }
+}
