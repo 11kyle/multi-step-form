@@ -103,27 +103,36 @@ function App() {
           <Heading>Select your plan</Heading>
           <p className="text-[#9699AA]">You have the option of monthly or yearly billing.</p>
           <div className="lg:flex lg:flex-row lg:gap-x-5">
-            <Tile>
-              <img className="lg:mb-10" src={iconArcade} alt="arcade icon" />
-              <div>
-                <Heading version="heading-2">Arcade</Heading>
-                <p className="text-[#9699AA] text-sm">$9/mo</p>
-              </div>
-            </Tile>
-            <Tile>
-              <img className="lg:mb-10" src={iconAdvanced} alt="arcade icon" />
-              <div>
-                <Heading version="heading-2">Advanced</Heading>
-                <p className="text-[#9699AA] text-sm">$12/mo</p>
-              </div>
-            </Tile>
-            <Tile>
-              <img className="lg:mb-10" src={iconPro} alt="arcade icon" />
-              <div>
-                <Heading version="heading-2">Pro</Heading>
-                <p className="text-[#9699AA] text-sm">$15/mo</p>
-              </div>
-            </Tile>
+            <div className="lg:basis-1/3">
+              <input type="radio" id="arcade" name="hosting" value="arcade" class="hidden peer" required />
+              <label for="arcade" class="flex flex-row lg:flex-col items-center lg:items-start gap-x-3 border border-[#D6D9E6] hover:border-[#483EFF] peer-checked:bg-[#F8F9FF] peer-checked:border-[#483EFF] rounded-md w-full p-4 mt-3 cursor-pointer">                           
+                <img className="lg:mb-10" src={iconArcade} alt="arcade icon" />
+                <div>
+                  <Heading version="heading-2">Arcade</Heading>
+                  <p className="text-[#9699AA] text-sm">$9/mo</p>
+                </div>
+              </label>
+            </div>
+            <div className="lg:basis-1/3">
+              <input type="radio" id="advanced" name="hosting" value="advanced" class="hidden peer" />
+              <label for="advanced" class="flex flex-row lg:flex-col items-center lg:items-start gap-x-3 border border-[#D6D9E6] hover:border-[#483EFF] peer-checked:bg-[#F8F9FF] peer-checked:border-[#483EFF] rounded-md w-full p-4 mt-3 cursor-pointer">
+                <img className="lg:mb-10" src={iconAdvanced} alt="arcade icon" />
+                <div>
+                  <Heading version="heading-2">Advanced</Heading>
+                  <p className="text-[#9699AA] text-sm">$12/mo</p>
+                </div>
+              </label>
+            </div>
+            <div className="lg:basis-1/3">
+              <input type="radio" id="pro" name="hosting" value="pro" class="hidden peer" />
+              <label for="pro" class="flex flex-row lg:flex-col items-center lg:items-start gap-x-3 border border-[#D6D9E6] hover:border-[#483EFF] peer-checked:bg-[#F8F9FF] peer-checked:border-[#483EFF] rounded-md w-full p-4 mt-3 cursor-pointer">
+                <img className="lg:mb-10" src={iconPro} alt="arcade icon" />
+                <div>
+                  <Heading version="heading-2">Pro</Heading>
+                  <p className="text-[#9699AA] text-sm">$15/mo</p>
+                </div>
+              </label>
+            </div>
           </div>
           <div className="flex flex-row items-center justify-center bg-[#F8F9FF] rounded-md p-4 mt-5">
             <span className="text-sm font-medium text-[#022959]">Monthly</span>
